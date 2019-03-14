@@ -8,5 +8,10 @@
 
 import Foundation
 
-print("Hello, World!")
+
+let player1 = Player();
+player1.name = "Massinissa"
+player1.createTeam()
+let player2 = Player()
+player2.createTeam()
 
