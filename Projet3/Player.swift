@@ -48,11 +48,15 @@ class Player {
                 if let char = character {
                     print("Comment voulez vous appeler votre personnage ?")
                     if let name = readLine(){
-                        char.name = name
-                        team.append(char)
-                        print("\(char.name) a été ajouté à votre équipe !")
-                    }else{
-                        print("Pas de nom....pas de personnage")
+                        if name.count > 0 {
+                            char.name = name
+                            //TODO: Vérifier si le nom est disponible 
+                            team.append(char)
+                            print("\(char.name) a été ajouté à votre équipe !")
+                        }else{
+                            print("Pas de nom....pas de personnage")
+                        }
+                        
                     }
                 }
             }
